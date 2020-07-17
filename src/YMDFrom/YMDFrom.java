@@ -17,7 +17,6 @@ public class YMDFrom
 			src = getScanner(args[0]);
 		int [] dmy = getDmy(src);
 		int [] out = new int[3];
-		int curYear = Calendar.getInstance().get(Calendar.YEAR);
 		int curMonth = Calendar.getInstance().get(Calendar.MONTH) + 1;
 		int curDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 		out[2] = Year.now().getValue() - dmy[2] + ((curMonth >= dmy[1] && curDay >= dmy[0]) ? 1 : 0) - 1;
